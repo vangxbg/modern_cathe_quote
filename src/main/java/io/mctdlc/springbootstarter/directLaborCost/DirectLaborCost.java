@@ -15,7 +15,7 @@ public class DirectLaborCost {
 	@Id @GeneratedValue (strategy = GenerationType.SEQUENCE)
 	private Long id;
 	private String number;
-	private String Revision;
+	private String revision;
 	@ManyToOne
 	private ProductRecord productRecord;
 	
@@ -28,7 +28,7 @@ public class DirectLaborCost {
 		super();
 		this.id = id;
 		this.number = number;
-		Revision = revision;
+		this.revision = revision;
 		this.productRecord = new ProductRecord(productRecordId, "", "", "", "");
 		
 	}
@@ -51,11 +51,11 @@ public class DirectLaborCost {
 	}
 
 	public String getRevision() {
-		return Revision;
+		return revision;
 	}
 
 	public void setRevision(String revision) {
-		Revision = revision;
+		this.revision = revision;
 	}
 
 	public ProductRecord getProductRecord() {
